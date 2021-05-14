@@ -32,8 +32,8 @@ function getDeviceId(facingMode, chooseDeviceId = defaultDeviceIdChooser) {
       }
 
       const pattern = facingMode == 'rear'
-        ? /rear|back|environment/ig
-        : /front|user|face/ig
+        ? /rear|back|environment|背面カメラ/ig
+        : /front|user|face|前面カメラ/ig
 
       // Filter out video devices without the pattern
       const filteredDevices = videoDevices.filter(({ label }) =>
